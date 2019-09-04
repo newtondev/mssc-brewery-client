@@ -2,6 +2,7 @@ package com.newtondev.msscbreweryclient.web.client;
 
 import com.newtondev.msscbreweryclient.web.model.BeerDto;
 import com.newtondev.msscbreweryclient.web.model.CustomerDto;
+import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.stereotype.Component;
@@ -16,6 +17,8 @@ public class BreweryClient {
 
     public final String BEER_PATH_V1 = "/api/v1/beer/";
     public final String CUSTOMER_PATH_V1 = "/api/v1/customer/";
+
+    @Setter
     private String apihost;
 
     private final RestTemplate restTemplate;
